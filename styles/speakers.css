@@ -1,19 +1,18 @@
-@import './base.css';
+@import "./base.css";
+
+.shopping-cart-icon--primary g path {
+  fill: var(--color-primary);
+}
 
 .speakers .main__title {
   font-size: 98px;
 }
 
-.shopping-cart-icon__icon--primary g path {
-  fill: var(--color-primary);
-}
-
 .speakers__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 200px;
-  row-gap: 12px;
-  justify-content: space-between;
+  grid-column-gap: 200px;
+  grid-row-gap: 120px;
 }
 
 .speaker__wrapper {
@@ -40,6 +39,7 @@
   font-size: 24px;
   margin-bottom: 32px;
 }
+
 .speaker__bio {
   font-size: 20px;
 }
@@ -49,8 +49,14 @@
   color: var(--color-text-on-secondary);
 }
 
-@media (max-width=1000px) {
+@media (max-width: 1000px) {
   .speakers__wrapper {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 840px) {
+  .nav {
+    background-color: var(--color-text-on-primary);
   }
 }
